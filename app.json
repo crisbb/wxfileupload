@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "简历上传",
+    "navigationBarBackgroundColor": "#1E88E5",
+    "navigationBarTextStyle": "white"
+  },
+  "__usePrivacyCheck__": true
+}

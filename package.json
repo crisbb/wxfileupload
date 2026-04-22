@@ -1,0 +1,13 @@
+{
+  "name": "wechat-resume-uploader",
+  "version": "1.0.0",
+  "description": "微信小程序 - 简历上传",
+  "scripts": {
+    "ci:upload": "node scripts/upload.js",
+    "ci:preview": "node scripts/preview.js",
+    "ci:validate": "node scripts/validate.js"
+  },
+  "devDependencies": {
+    "miniprogram-ci": "^1.6.0"
+  }
+}

@@ -1,0 +1,39 @@
+name: Deploy Mini Program
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate code
+        env:
+          WECHAT_CI_KEY_PATH: ./private.key
+        run: |
+          echo "$WECHAT_CI_KEY" > ./private.key
+          npm run ci:validate
+        env:
+          WECHAT_CI_KEY: ${{ secrets.WECHAT_CI_KEY }}
+
+      - name: Upload to WeChat
+        env:
+          WECHAT_CI_KEY_PATH: ./private.key
+        run: npm run ci:upload
+        env:
+          WECHAT_CI_KEY: ${{ secrets.WECHAT_CI_KEY }}
+          WECHAT_CI_VERSION: ${{ github.run_number }}
+          WECHAT_CI_DESC: "CI build #${{ github.run_number }} - ${{ github.event.head_commit.message || 'Manual trigger' }}"

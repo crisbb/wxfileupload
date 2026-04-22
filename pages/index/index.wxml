@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="card">
+    <text class="title">上传简历</text>
+    <text class="description">请选择微信群聊中的聊天文件，支持简历上传。</text>
+    <button class="primary-btn" bindtap="onUploadTap">上传简历</button>
+    <button class="secondary-btn" bindtap="onUploadTap">立即上传</button>
+  </view>
+
+  <view class="file-info" wx:if="{{fileName}}">
+    <text>已选文件：</text>
+    <text class="file-name">{{fileName}}</text>
+  </view>
+
+  <view class="status-info" wx:if="{{uploadStatus}}">
+    <text>{{uploadStatus}}</text>
+  </view>
+
+  <button class="primary-btn" wx:if="{{uploadId}}" bindtap="onImportTap">导入文心App</button>
+</view>

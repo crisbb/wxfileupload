@@ -1,0 +1,4 @@
+node_modules/
+*.key
+preview_qrcode.png
+.DS_Store

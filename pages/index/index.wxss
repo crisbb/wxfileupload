@@ -1,0 +1,93 @@
+.container {
+  padding: 30rpx;
+}
+.card {
+  padding: 40rpx;
+  background: #ffffff;
+  border-radius: 24rpx;
+  box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.08);
+}
+.title {
+  display: block;
+  font-size: 32rpx;
+  color: #1a1a1a;
+  font-weight: bold;
+  margin-bottom: 18rpx;
+}
+.description {
+  display: block;
+  color: #666666;
+  line-height: 36rpx;
+  margin-bottom: 34rpx;
+}
+.primary-btn,
+.secondary-btn {
+  width: 100%;
+  margin-bottom: 18rpx;
+  border-radius: 16rpx;
+  height: 72rpx;
+  font-size: 32rpx;
+}
+.primary-btn {
+  background-color: #1E88E5;
+  color: #ffffff;
+}
+.secondary-btn {
+  background-color: #f2f6ff;
+  color: #1E88E5;
+}
+.file-info {
+  margin-top: 24rpx;
+  color: #333333;
+}
+.file-name {
+  display: block;
+  margin-top: 12rpx;
+  color: #1E88E5;
+}
+.privacy-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.privacy-dialog {
+  width: 650rpx;
+  padding: 36rpx;
+  background: #ffffff;
+  border-radius: 24rpx;
+}
+.privacy-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.privacy-text {
+  font-size: 28rpx;
+  color: #555555;
+  line-height: 40rpx;
+  margin-bottom: 32rpx;
+}
+.button-row {
+  display: flex;
+  justify-content: space-between;
+}
+.cancel-btn,
+.confirm-btn {
+  width: 48%;
+  height: 72rpx;
+  border-radius: 16rpx;
+}
+.cancel-btn {
+  background: #f5f5f5;
+  color: #333333;
+}
+.confirm-btn {
+  background: #1E88E5;
+  color: #ffffff;
+}
