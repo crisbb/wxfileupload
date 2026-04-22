@@ -27,14 +27,12 @@ async function validate() {
 
   console.log('开始校验小程序代码...');
 
-  const result = await ci.validate({
-    project,
-  });
+  const result = await ci.checkCodeQuality(project);
 
   console.log('校验完成!');
-  if (result.errCode === 0) {
+  if (result && result.errCode === 0) {
     console.log('代码校验通过，没有发现问题');
-  } else {
+  } else if (result) {
     console.log(`校验发现 ${result.warningCount || 0} 个警告, ${result.errorCount || 0} 个错误`);
     if (result.warnings) {
       result.warnings.forEach((w) => console.log(`  ⚠ ${w}`));
