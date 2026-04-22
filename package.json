@@ -8,6 +8,9 @@
     "ci:validate": "node scripts/validate.js"
   },
   "devDependencies": {
-    "miniprogram-ci": "^1.6.0"
+    "less": "^4.2.0",
+    "miniprogram-ci": "^1.6.0",
+    "sass": "^1.69.0",
+    "typescript": "^5.3.0"
   }
 }
