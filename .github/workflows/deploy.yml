@@ -9,15 +9,10 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - name: Checkout via SSH
-        env:
-          HOME: /Users/zhangbingyan
-          GIT_SSH_COMMAND: "ssh -i /Users/zhangbingyan/.ssh/github_ed25519 -o StrictHostKeyChecking=no"
-        run: |
-          rm -rf ./*
-          rm -rf ./.[!.]*
-          rm -rf ./..?*
-          git clone --depth=1 git@github.com:${{ github.repository }}.git .
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Check Node.js
         run: node -v && npm -v
